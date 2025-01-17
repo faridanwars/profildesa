@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Website Desa Tebing Tinggi Kuantan Singingi">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Struktur Organisasi</title>
+
+
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+    <!-- Slick Slider  CSS -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        .organization-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .chart-level {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .chart-box {
+            background-color: #ffffff;
+            border: 2px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            text-align: center;
+            margin: 0 10px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .chart-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+        }
+
+        .chart-box b {
+            font-size: 18px;
+        }
+
+        .line {
+            position: relative;
+            width: 2px;
+            height: 30px;
+            background-color: #000000;
+            margin: 0 auto;
+            animation: grow 1s ease-in-out infinite alternate;
+        }
+
+        .line-horizontal {
+            width: 70%;
+            height: 2px;
+            background-color: #000000;
+            animation: grow-horizontal 1s ease-in-out infinite alternate;
+        }
+
+        .line-wrapper {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .line-wrapper .line-horizontal {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
+
+        h1 {
+            font-size: 24px;
+            color: #0077b6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+
+        .carousel-container::-webkit-scrollbar-track {
+            background: #ddd;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card iframe {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 2px solid #333;
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        .controls button {
+            border: none;
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .controls button:hover {
+            background-color: #555;
+        }
+    </style>
+
+</head>
+
+<body id="top">
+    <header>
+        <div class="header-top-bar">
+            <div class="container">
+                <span class="font-weight-bold mx-auto d-block text-center">DESA GENENGSARI</span>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navigation" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="" class="img-fluid">
+                </a>
+
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
+                    aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icofont-navigation-menu"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarmain">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Profil<i class="icofont-thin-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="sejarah-desa.html">Sejarah Desa</a></li>
+                                <li><a class="dropdown-item" href="visi-misi.html">Visi Misi</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Kondisi Desa<i
+                                    class="icofont-thin-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                                <li><a class="dropdown-item" href="demografi.html">Demografi</a></li>
+                                <li><a class="dropdown-item" href="keadaan-sosial.html">Keadaan Sosial</a></li>
+                                <li><a class="dropdown-item" href="keadaan-ekonomi.html">Keadaan Ekonomi</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Kondisi Pemerintahan<i
+                                    class="icofont-thin-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                                <li><a class="dropdown-item" href="pembagian-wilayah.html">Pembagian Wilayah</a></li>
+                                <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisai</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="masalah-potensi.html">Masalah dan Potensi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- START -->
+
+    <section class="page-title bg-1">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">STRUKTUR ORGANISASI</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section department-single">
+        <div class="container">
+            <h3 class="text-md">Nama-Nama Aparat Desa :</h3>
+            <div class="divider my-4"></div>
+            <div class="organization-chart">
+                <!-- Kepala Desa -->
+                <div class="chart-level">
+                    <div class="chart-box"><b>Kepala Desa</b><br>Wiwik Indriyati</div>
+                </div>
+                <div class="line"></div>
+
+                <!-- Sekretaris Desa -->
+                <div class="chart-level">
+                    <div class="chart-box"><b>Sekretaris Desa</b><br>Nanang Sulistyo Adi</div>
+                </div>
+                <div class="line"></div>
+
+                <!-- Kepala Seksi -->
+                <div class="line-wrapper">
+                    <div class="line-horizontal"></div>
+                </div>
+                <div class="line"></div>
+                <div class="chart-level">
+                    <div class="chart-box"><b>Kepala Seksi Pemerintahan</b><br>Joko Sutojo</div>
+                    <div class="chart-box"><b>Kepala Seksi Keuangan</b><br>Tri Wahyuningsih</div>
+                    <div class="chart-box"><b>Kepala Seksi Keuangan</b><br>Suwanto</div>
+                    <div class="chart-box"><b>Kepala Seksi Kesejahteraan dan Pelayanan</b><br>Elisa Dwi Yuliani</div>
+                </div>
+            </div>
+
+            <script>
+                // JavaScript untuk animasi tambahan (opsional)
+                document.querySelectorAll('.chart-box').forEach(box => {
+                    box.addEventListener('mouseenter', () => {
+                        box.style.backgroundColor = '#e6e6e6';
+                    });
+
+                    box.addEventListener('mouseleave', () => {
+                        box.style.backgroundColor = '#ffffff';
+                    });
+                });
+            </script>
+            <br>
+
+            <h3 class="text-md">Nama-Nama Kepala Dusun :</h3>
+            <div class="divider my-6"></div>
+            <br>
+            <div class="controls">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+            <div class="carousel-container" id="carouselContainer">
+                <div class="card" style="width: 300px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13995.547194318178!2d110.74912073861934!3d-7.297143549321297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a0a882468c773%3A0xeb33f715251dbdf0!2sGrogol%2C%20Genengsari%2C%20Kec.%20Kemusu%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah!5e1!3m2!1sid!2sid!4v1736581587140!5m2!1sid!2sid"
+                        allowfullscreen="" loading="lazy"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Grogol</h5>
+                        <p class="card-text">Nama: Suyoto</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5862.858714604127!2d110.74431284501749!3d-7.294929560517241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a0a9071a2186d%3A0x1a2febe750cd9f37!2sGenengsari%2C%20Kec.%20Kemusu%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah!5e1!3m2!1sid!2sid!4v1736581730166!5m2!1sid!2sid"
+                        allowfullscreen="" loading="lazy"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Genengsari</h5>
+                        <p class="card-text">Nama: Suwarno</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6997.852829059529!2d110.76073093900703!3d-7.292075678759519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a0a7c780a5fe7%3A0xc251024eec9d152f!2sBalerejo%2C%20Genengsari%2C%20Kec.%20Kemusu%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah!5e1!3m2!1sid!2sid!4v1736581629188!5m2!1sid!2sid"
+                        allowfullscreen="" loading="lazy"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Balerejo</h5>
+                        <p class="card-text">Nama: Badrun</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4917.452105997014!2d110.74929149612653!3d-7.316361125858097!2m3!1f0!2f38.481812050347436!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x2e70a07762929e35%3A0x2416ec91b016737e!2sNgargotirto%2C%20Genengsari%2C%20Kec.%20Kemusu%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah!5e1!3m2!1sid!2sid!4v1736572132481!5m2!1sid!2sid"
+                        allowfullscreen="" loading="lazy"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Ngargotirto</h5>
+                        <p class="card-text">Nama: Wedoyan Pratama</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13964.779544617497!2d110.73310779702076!3d-7.2932753411868685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a0a8452d9df09%3A0x61e76ee6bb73badb!2sSalamsari%2C%20Genengsari%2C%20Kec.%20Kemusu%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah!5e1!3m2!1sid!2sid!4v1736581501009!5m2!1sid!2sid"
+                        allowfullscreen="" loading="lazy"></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Salam Sari</h5>
+                        <p class="card-text">Nama: Sofyan Adi</p>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                const container = document.getElementById('carouselContainer');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+
+                prevBtn.addEventListener('click', () => {
+                    container.scrollBy({
+                        left: -container.offsetWidth,
+                        behavior: 'smooth'
+                    });
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    container.scrollBy({
+                        left: container.offsetWidth,
+                        behavior: 'smooth'
+                    });
+                });
+            </script>
+            <br>
+        </div>
+    </section>
+
+
+    <!-- END -->
+
+
+
+    <<!-- footer Start -->
+        <footer class="footer section gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mr-auto col-sm-6">
+                        <div class="widget mb-5 mb-lg-0">
+                            <h4 class="text-capitalize mb-3">Detail</h4>
+                            <div class="divider mb-4"></div>
+
+                            <p>Desa Genengsari <br> Kecamatan Kemusu <br> Kabupaten Boyolali <br> Provinsi Jawa Tengah
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mr-auto col-sm-6">
+                        <div class="widget mb-5 mb-lg-0">
+                            <h4 class="text-capitalize mb-3">Kontak</h4>
+                            <div class="divider mb-4"></div>
+                            <ul class="list-inline footer-socials mt-4">
+                                <li class="list-inline-item"><a href="https://www.instagram.com/pemdes_genengsari/"
+                                        target="_blank	"><i class="icofont-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pemdesgenengsari123@gmail.com
+								"><i class="icofont-email"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widget mb-5 mb-lg-0">
+                            <h4 class="text-capitalize mb-3">Menu</h4>
+                            <div class="divider mb-4"></div>
+
+                            <ul class="list-unstyled footer-menu lh-35">
+                                <li><a href="sejarah-desa.html">Sejarah </a></li>
+                                <li><a href="visi-misi.html">Visi & Misi</a></li>
+                                <li><a href="demografi.html">Demografi</a></li>
+                                <li><a href="struktur-organisasi.html">Struktur Organisasi</a></li>
+                                <li><a href="masalah-potensi.html">Masalah dan Potensi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+
+
+
+        <!-- 
+        Essential Scripts
+        =====================================-->
+
+
+        <!-- Main jQuery -->
+        <script src="plugins/jquery/jquery.js"></script>
+        <!-- Bootstrap 4.3.2 -->
+        <script src="plugins/bootstrap/js/popper.js"></script>
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="plugins/counterup/jquery.easing.js"></script>
+        <!-- Slick Slider -->
+        <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+        <!-- Counterup -->
+        <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+
+        <script src="plugins/shuffle/shuffle.min.js"></script>
+        <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+
+        <script src="js/script.js"></script>
+        <script src="js/contact.js"></script>
+
+</body>
+
+</html>

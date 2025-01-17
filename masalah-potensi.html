@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Website Desa Tebing Tinggi Kuantan Singingi">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Masalah dan Potensi</title>
+
+    <!-- Favicon -->
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Icon Font Css -->
+    <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+    <!-- Slick Slider  CSS -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Styling for hidden content */
+        .hidden-content {
+            display: none;
+            color: #444;
+            transition: max-height 1s ease;
+        }
+
+        .hidden-content.show {
+            display: inline;
+        }
+
+        /* General card and text styling */
+        .card-body {
+            padding: 20px;
+        }
+
+        h3,
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.8;
+            text-align: justify;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Image styling with hover effect */
+        .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .shadow-hover {
+            box-shadow: 0 4px 8px rgba(117, 8, 8, 0.1);
+        }
+
+        .shadow-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button styling */
+        .btn-outline-primary {
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #27313b;
+            color: #ffffff;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .row.align-items-center {
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="top">
+    <header>
+        <div class="header-top-bar">
+            <div class="container">
+                <span class="font-weight-bold mx-auto d-block text-center">DESA GENENGSARI</span>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navigation" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="" class="img-fluid">
+                </a>
+
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
+                    aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icofont-navigation-menu"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarmain">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Profil<i class="icofont-thin-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="sejarah-desa.html">Sejarah Desa</a></li>
+                                <li><a class="dropdown-item" href="visi-misi.html">Visi Misi</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Kondisi Desa<i
+                                    class="icofont-thin-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                                <li><a class="dropdown-item" href="demografi.html">Demografi</a></li>
+                                <li><a class="dropdown-item" href="keadaan-sosial.html">Keadaan Sosial</a></li>
+                                <li><a class="dropdown-item" href="keadaan-ekonomi.html">Keadaan Ekonomi</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Kondisi Pemerintahan<i
+                                    class="icofont-thin-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                                <li><a class="dropdown-item" href="pembagian-wilayah.html">Pembagian Wilayah</a></li>
+                                <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisai</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="masalah-potensi.html">Masalah dan Potensi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- START -->
+    <section class="page-title bg-1">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block text-center">
+                        <h1 class="text-capitalize mb-5 text-lg">MASALAH DAN POTENSI</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section department-single py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Start Card -->
+                <div class="col-lg-10 col-md-12 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="images/padi.jpg" alt="Potret Desa" class="img-fluid rounded shadow-hover">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="text-md mb-3 text-primary">Latar Belakang</h3>
+                                <h5 class="card-title mb-3 text-dark">Masalah</h5>
+                                <p class="text-justify">
+                                    Masalah yang dihadapi adalah disaat air telah mencapai maksimal kapasitasnya...
+                                    <span id="more-sketsa-desa" class="hidden-content">
+                                        yang ditandai dengan adanya batas merah. Batas merah merupakan batas kapasitas
+                                        air
+                                        yang dapat terpenuhi disaat air mencapai keadaan maksimalnya. Mlangi adalah
+                                        daerah
+                                        yang paling terkena dampaknya disaat air mencapai maksimal. Biasanya penduduk
+                                        yang
+                                        bertempat tinggal di Mlangi, mengungsi pada rumah tetangga nya saja atau rumah
+                                        yang
+                                        tidak terkena genangan air nya.
+                                    </span>
+                                </p>
+                                <button onclick="toggleReadMore('more-sketsa-desa', this)"
+                                    class="btn btn-outline-primary btn-sm">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card -->
+
+                <!-- Start Card -->
+                <div class="col-lg-10 col-md-12">
+                    <div class="row align-items-center flex-md-row-reverse">
+                        <div class="col-md-6">
+                            <img src="images/jagung2.jpg" alt="Potret Desa" class="img-fluid rounded shadow-hover">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3 text-dark">Potensi</h5>
+                                <p class="text-justify">
+                                    Desa ini dikenal sebagai salah satu penghasil jagung di Kabupaten Boyolali...
+                                    <span id="more-potret-desa" class="hidden-content">
+                                        Sebagian besar penduduknya menggantungkan hidup pada pertanian jagung, yang
+                                        merupakan komoditas utama di daerah tersebut. Kadang mereka lebih berfokus dulu
+                                        pada tanaman jagung mereka . Misalnya disaat mereka sudah selesai memanen
+                                        jagung,
+                                        mereka akan kembali ke pekerjaan yang lain seperti berjualan ,dll . Mereka akan
+                                        kembali
+                                        setelah musim panen tiba.
+                                    </span>
+                                </p>
+                                <button onclick="toggleReadMore('more-potret-desa', this)"
+                                    class="btn btn-outline-primary btn-sm">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card -->
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function toggleReadMore(contentId, button) {
+            const content = document.getElementById(contentId);
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                button.textContent = 'Read More';
+            } else {
+                content.classList.add('show');
+                button.textContent = 'Read Less';
+            }
+        }
+    </script>
+
+
+
+    <!-- END -->
+
+
+
+    <<!-- footer Start -->
+        <footer class="footer section gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mr-auto col-sm-6">
+                        <div class="widget mb-5 mb-lg-0">
+                            <h4 class="text-capitalize mb-3">Detail</h4>
+                            <div class="divider mb-4"></div>
+
+                            <p>Desa Genengsari <br> Kecamatan Kemusu <br> Kabupaten Boyolali <br> Provinsi Jawa Tengah
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mr-auto col-sm-6">
+                        <div class="widget mb-5 mb-lg-0">
+                            <h4 class="text-capitalize mb-3">Kontak</h4>
+                            <div class="divider mb-4"></div>
+                            <ul class="list-inline footer-socials mt-4">
+                                <li class="list-inline-item"><a href="https://www.instagram.com/pemdes_genengsari/"
+                                        target="_blank	"><i class="icofont-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pemdesgenengsari123@gmail.com
+								"><i class="icofont-email"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widget mb-5 mb-lg-0">
+                            <h4 class="text-capitalize mb-3">Menu</h4>
+                            <div class="divider mb-4"></div>
+
+                            <ul class="list-unstyled footer-menu lh-35">
+                                <li><a href="sejarah-desa.html">Sejarah </a></li>
+                                <li><a href="visi-misi.html">Visi & Misi</a></li>
+                                <li><a href="demografi.html">Demografi</a></li>
+                                <li><a href="struktur-organisasi.html">Struktur Organisasi</a></li>
+                                <li><a href="masalah-potensi.html">Masalah dan Potensi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+
+
+        <!-- 
+        Essential Scripts
+        =====================================-->
+
+
+        <!-- Main jQuery -->
+        <script src="plugins/jquery/jquery.js"></script>
+        <!-- Bootstrap 4.3.2 -->
+        <script src="plugins/bootstrap/js/popper.js"></script>
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="plugins/counterup/jquery.easing.js"></script>
+        <!-- Slick Slider -->
+        <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+        <!-- Counterup -->
+        <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+
+        <script src="plugins/shuffle/shuffle.min.js"></script>
+        <script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+
+        <script src="js/script.js"></script>
+        <script src="js/contact.js"></script>
+
+</body>
+
+</html>
